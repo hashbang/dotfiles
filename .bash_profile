@@ -10,7 +10,7 @@ echo "               ";
 echo " Things to explore:";
 echo " ";
 echo "   * You are already in our IRC channel in \"tab 0\" of this \"tmux\" session";
-echo "     Type <Ctrl-B> + 0 to get there and talk to us";
+echo "     Type <Ctrl-B> + 0 to chat with us and <Ctrl-B> + 1 to get back here"
 echo " ";
 echo "   * You have public webspace at http://$USER.hashbang.sh";
 echo "     Any files you create in your 'Public' folder will appear there";
@@ -20,7 +20,7 @@ echo "     available please ask in IRC and someone can probably make it happen";
 echo " ";
 echo " Also note you can get back here at any time via:";
 echo " ";
-echo " > ssh $USER@shell.hashbang.sh";
+echo " > ssh hashbang";
 echo " ";
 echo " To disable this message run \`rm .bash_profile\`";
 echo " ";
