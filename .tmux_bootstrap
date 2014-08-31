@@ -1,6 +1,8 @@
 #!/bin/bash
 
-tmux ls | grep main > /dev/null ||
-	(tmux new-session -d -s main weechat
-	tmux new-window -a)
-	exec tmux attach -t main
+tmux ls | grep '#!' > /dev/null || (
+  tmux new-session -d -s '#!' -n 'chat' weechat
+  tmux new-window -n 'mail' mutt
+  tmux new-window -n 'shell' -a
+)
+exec tmux attach -t '#!'
