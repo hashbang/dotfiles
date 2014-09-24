@@ -1,4 +1,4 @@
-export TERM=xterm-256color
+export TERM=screen-256color
 
 echo "   _  _    __  ";
 echo " _| || |_ |  |  Welcome to #!. This network has three rules:";
