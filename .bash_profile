@@ -1,4 +1,6 @@
 export TERM=screen-256color
+export EDITOR=nano
+export VISUAL=$EDITOR
 
 echo "   _  _    __  ";
 echo " _| || |_ |  |  Welcome to #!. This network has three rules:";
