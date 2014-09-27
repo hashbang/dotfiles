@@ -14,11 +14,11 @@ echo " ";
 echo "   * You are in a 'tmux' session. There are three tabs below."
 echo "     Navigate with <Ctrl-b> + a tab number."
 echo " ";
-echo "   * You are already in our IRC channel in \"tab 0\"";
-echo "     Type <Ctrl-B> + 0 to reach it and chat with us."
+echo "   * You are already in our IRC channel in \"tab 1\"";
+echo "     Type <Ctrl-B> + 1 to reach it and chat with us."
 echo " ";
 echo "   * Your system email address is: $USER@hashbang.sh";
-echo "     Type <Ctrl-B> + 1 to check your email"
+echo "     Type <Ctrl-B> + 2 to check your email"
 echo " ";
 echo "   * You have public webspace at http://$USER.hashbang.sh";
 echo "     Any files you create in your 'Public' folder will appear there";
