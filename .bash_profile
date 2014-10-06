@@ -35,3 +35,4 @@ echo " ";
 # make sure this is an interactive session, then start tmux
 [[ $- != *i* ]] && return
 [[ -z "$TMUX" ]] && ~/.tmux_bootstrap
+[[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"
