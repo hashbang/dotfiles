@@ -23,14 +23,14 @@ echo " ";
 echo "   * You have public webspace at http://$USER.hashbang.sh";
 echo "     Any files you create in your 'Public' folder will appear there";
 echo " ";
-echo "   * We have a wide range of tools to explore. If a tool you want is not";
-echo "     available please ask in IRC and someone can probably make it happen";
-echo " ";
 echo "   * To learn more about us and our offerings type: man hashbang";
 echo " ";
-echo " Also note you can get back here at any time via:";
-echo " > ssh hashbang";
+echo " Like what we are doing? Consider donating towards expanded offerings: ";
+echo "  * Bitcoin - [ 1DtTvCLiUMhs21QcETQzLyiqxoopUjqBSU ]";
+echo "  * Google Wallet - [ donate@hashbang.sh ]";
+echo "  * PayPal - [ http://goo.gl/aSQWy0 ]";
 echo " ";
+echo " Dedicated servers generously sponsored by: (http://nodewolf.com)";
 
 # make sure this is an interactive session, then start tmux
 [[ $- != *i* ]] && return
