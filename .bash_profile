@@ -25,7 +25,7 @@ echo "     Any files you create in your 'Public' folder will appear there";
 echo " ";
 echo "   * To learn more about us and our offerings type: man hashbang";
 echo " ";
-echo " Like what we are doing? Consider donating towards expanded offerings: ";
+echo " Like what we're doing? Consider donating to expand our efforts.";
 echo "  * Bitcoin - [ 1DtTvCLiUMhs21QcETQzLyiqxoopUjqBSU ]";
 echo "  * Google Wallet - [ donate@hashbang.sh ]";
 echo "  * PayPal - [ http://goo.gl/aSQWy0 ]";
