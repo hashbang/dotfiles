@@ -30,7 +30,7 @@ echo "  * Bitcoin - [ 1DtTvCLiUMhs21QcETQzLyiqxoopUjqBSU ]";
 echo "  * Google Wallet - [ donate@hashbang.sh ]";
 echo "  * PayPal - [ http://goo.gl/aSQWy0 ]";
 echo " ";
-echo " Dedicated servers generously sponsored by: (http://nodewolf.com)";
+echo " Community shell servers generously sponsored by: (http://atlantic.net)";
 
 # make sure this is an interactive session, then start tmux
 [[ $- != *i* ]] && return
