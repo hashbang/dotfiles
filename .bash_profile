@@ -1,4 +1,11 @@
-export TERM=screen-256color
+case "$TERM" in
+  xterm-256color)
+    export TERM=screen-256color
+    ;;
+  *)
+    export TERM=screen
+    ;;
+esac
 export EDITOR=nano
 export VISUAL=$EDITOR
 
@@ -11,15 +18,25 @@ echo "  |_||_|  (__)  3. Be excellent to each other";
 echo "               ";
 echo " Things to explore:";
 echo " ";
-echo "   * You are in a 'tmux' session. There are three tabs below."
-echo "     Navigate with <Ctrl-b> + a tab number."
-echo " ";
-echo "   * You are already in our IRC channel in \"tab 1\"";
-echo "     Type <Ctrl-B> + 1 to reach it and chat with us."
-echo " ";
-echo "   * Your system email address is: $USER@hashbang.sh";
-echo "     Type <Ctrl-B> + 2 to check your email"
-echo " ";
+if [ ! -z "$TMUX" ] # check for tmux before displaying tmux help
+then
+  echo "   * You are in a 'tmux' session. There are three tabs below."
+  echo "     Navigate with <Ctrl-b> + a tab number."
+  echo " ";
+  echo "   * You are already in our IRC channel in \"tab 1\"";
+  echo "     Type <Ctrl-B> + 1 to reach it and chat with us."
+  echo " ";
+  echo "   * Your system email address is: $USER@hashbang.sh";
+  echo "     Type <Ctrl-B> + 2 to check your email"
+  echo " ";
+else
+  echo "   * You can start 'tmux' to enter a tmux session."
+  echo "     Help will be displayed when tmux is started."
+  echo " ";
+  echo "   * You can resume a detached tmux session at any time."
+  echo "     Use 'tmux attach' to resume your tmux session."
+  echo " ";
+fi
 echo "   * You have public webspace at http://$USER.hashbang.sh";
 echo "     Any files you create in your 'Public' folder will appear there";
 echo " ";
