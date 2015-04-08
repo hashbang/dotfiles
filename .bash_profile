@@ -1,11 +1,3 @@
-case "$TERM" in
-  xterm-256color)
-    export TERM=screen-256color
-    ;;
-  *)
-    export TERM=screen
-    ;;
-esac
 export EDITOR=nano
 export VISUAL=$EDITOR
 
