@@ -21,7 +21,7 @@ then
   echo "   * Your system email address is: $USER@hashbang.sh";
   echo "     Type <Ctrl-B> + 2 to check your email"
   echo " ";
-  echo "   * You can detach from a tmux screen with <Ctrl-b> + <d>"
+  echo "   * You can detach from this tmux session with <Ctrl-b> + <d>"
   echo "     You can also re-attach outside of tmux with 'tmux attach'"
 else
   echo "   * You can start 'tmux' to enter a tmux session."
