@@ -15,12 +15,14 @@ then
   echo "   * You are in a 'tmux' session. There are three tabs below."
   echo "     Navigate with <Ctrl-b> + a tab number."
   echo " ";
-  echo "   * You are already in our IRC channel in \"tab 1\"";
+  echo "   * You are already in our IRC channel in \"tab 1\""
   echo "     Type <Ctrl-B> + 1 to reach it and chat with us."
   echo " ";
   echo "   * Your system email address is: $USER@hashbang.sh";
   echo "     Type <Ctrl-B> + 2 to check your email"
   echo " ";
+  echo "   * You can detach from this tmux session with <Ctrl-b> + <d>"
+  echo "     You can also re-attach outside of tmux with 'tmux attach'"
 else
   echo "   * You can start 'tmux' to enter a tmux session."
   echo "     Help will be displayed when tmux is started."
