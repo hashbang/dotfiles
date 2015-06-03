@@ -1,0 +1,9 @@
+[Unit]
+Description=SimpleHTTPServer
+
+[Service]
+ExecStart=/usr/bin/python3.4 -m http.server 8888
+WorkingDirectory=%h/Public
+
+[Install]
+WantedBy=multi-user.target
