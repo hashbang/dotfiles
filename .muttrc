@@ -3,6 +3,6 @@ message-hook '~f"^noreply@hashbang\.sh$"~s"^Press Enter to open this!$"~b"will s
     'push ":unset wait_key\n!(sleep 10 && rm $HOME/Mail/*/msg.welcome* 2>/dev/null)&\n:set wait_key\n"'
     
 set mbox_type=Maildir
-set folder=$HOME/mail
+set folder=$HOME/Mail
 set spoolfile=+/
 set header_cache=~/.cache/mutt
