@@ -1,6 +1,6 @@
 # Forcibly remove welcome message 10 seconds after opening it
 message-hook '~f"^noreply@hashbang\.sh$"~s"^Press Enter to open this!$"~b"will self-destruct"' \
-    'push ":unset wait_key\n!(sleep 10 && tmux display-message \'*PFWOOOOSH*: Message deleted: Welcome\')&\n:set wait_key\n"'
+    'push ":unset wait_key\n!(sleep 10 && tmux display-message '"'*PFWOOOOSH*: Message deleted: Welcome')"'&\n:set wait_key\n"'
     
 set mbox_type=Maildir
 set folder=$HOME/Mail
