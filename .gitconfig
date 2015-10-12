@@ -1,18 +1,7 @@
-# Include Grml's gitconfig
-[include]
-	path = ~/.grml-etc-core/etc/skel/.gitconfig
-
 # Those are #!'s customizations
 [push]
         default = simple
 [hub]
         protocol = https
-[alias]
-        br = branch
-        ff = merge --ff-only
-
-        derp = commit --amend --no-edit
-	clean-tags = fetch --all --prune
 
 # Your own customizations come here
-
