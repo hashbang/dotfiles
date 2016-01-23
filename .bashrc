@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 function paste() {
-	cat "$@" | curl -F "d=<-" a.pae.st 2>&- | grep "-PUBLIC"
+	cat "$@" | curl -F "d=<-" a.pae.st 2>&- | grep -F -- "-PUBLIC"
 }
 
 
