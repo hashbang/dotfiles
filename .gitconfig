@@ -1,0 +1,7 @@
+# Those are #!'s customizations
+[push]
+        default = simple
+[hub]
+        protocol = https
+
+# Your own customizations come here
