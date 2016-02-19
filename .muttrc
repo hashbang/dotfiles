@@ -6,6 +6,3 @@ set mbox_type=Maildir
 set folder=$HOME/Mail
 set spoolfile=+/
 set header_cache=~/.cache/mutt
-
-# ctrl + b to open links
-macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
