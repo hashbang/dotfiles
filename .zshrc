@@ -20,4 +20,7 @@ source ~/.grml-etc-core/etc/zsh/zshrc
 # Autoload Grml's functions and completions
 fpath=(~/.grml-etc-core/usr_share_grml/zsh/ $fpath)
 
+# Make plain `hashbangctl` invocations work
+alias hashbangctl='sudo hashbangctl'
+
 # Your custom things come here
