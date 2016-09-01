@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tmux ls | grep '#!' > /dev/null || (
-  tmux new-session -d -s '#!' -n 'chat' weechat-curses
+  tmux new-session -d -s '#!' -n 'chat' 'firejail weechat-curses'
   tmux new-window -n 'mail' 'firejail mutt'
   tmux new-window -n 'shell' -a
 )
