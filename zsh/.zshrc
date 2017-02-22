@@ -23,4 +23,7 @@ fpath=(~/.grml-etc-core/usr_share_grml/zsh/ $fpath)
 # Make plain `hashbangctl` invocations work
 alias hashbangctl='sudo hashbangctl'
 
+# Hashbang greetings message
+[ ! -d "/etc/hashbang" ] || /etc/hashbang/welcome
+
 # Your custom things come here
