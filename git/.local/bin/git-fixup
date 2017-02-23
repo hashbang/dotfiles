@@ -1,0 +1,24 @@
+#!/bin/sh -e
+# Inspired by Fillipo Valsorda, but more portable:
+#  https://blog.filippo.io/git-fixup-amending-an-older-commit/
+
+help() {
+    echo "git fixup <commit> [git-commit options...]"
+    echo "git-fixup introduces new changes in an older commit"
+    echo "  and rewrites (rebase) the git history."
+}
+
+if [ $# -eq 0 ]; then
+    help
+    exit 1
+elif [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+    help
+    exit 0
+fi
+
+EDITOR=true                  # Suppress the editor
+TARGET=$(git rev-parse "$1") # Commit hash to fixup
+shift
+
+git commit --fixup="$TARGET" "$@"
+git rebase -i --autostash --autosquash "$TARGET^"
