@@ -20,5 +20,5 @@ EDITOR=true                  # Suppress the editor
 TARGET=$(git rev-parse "$1") # Commit hash to fixup
 shift
 
-git commit --fixup="$TARGET" "$@"
+git -c commit.gpgSign=false commit --fixup="$TARGET" "$@"
 git rebase -i --autostash --autosquash "$TARGET^"
