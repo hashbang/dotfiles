@@ -10,3 +10,7 @@
 source ~/.grml-etc-core/etc/zsh/zprofile
 
 # Your custom things come here
+
+
+# At last, do the tmux magic
+[[ -n "$TMUX" ]] || ~/.tmux_bootstrap
