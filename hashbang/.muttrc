@@ -4,5 +4,7 @@ message-hook '~f"^noreply@hashbang\.sh$"~s"^Press Enter to open this!$"~b"will s
     
 set mbox_type=Maildir
 set folder=$HOME/Mail
+set record=+/sent
+set postponed=+/postponed
 set spoolfile=+/
 set header_cache=~/.cache/mutt
