@@ -1,0 +1,10 @@
+[Unit]
+Description=SimpleHTTPServer
+
+[Service]
+ExecStart=/usr/bin/python3 -m http.server %I
+WorkingDirectory=%h/Public
+Restart=always
+
+[Install]
+WantedBy=default.target
