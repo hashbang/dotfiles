@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tmux ls | grep '#!' > /dev/null || (
-  tmux new-session -d -s '#!' -n 'chat' "firejail --whitelist=$HOME/.weechat weechat"
+  tmux new-session -d -s '#!' -n 'chat' "weechat"
   tmux new-window -n 'mail' 'firejail mutt'
   tmux new-window -n 'shell' -a
 )
