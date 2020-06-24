@@ -1,0 +1,31 @@
+## hashbang nginx user configuration template
+## This is a simplified configuration, just to serve ~/Public
+
+worker_processes 1;
+error_log stderr;
+pid /home/${USER}/.nginx.pid;
+
+events {
+  worker_connections  1024;
+}
+
+http {
+  include             /etc/nginx/mime.types;
+  default_type        application/octet-stream;
+
+  sendfile on;
+
+  keepalive_timeout   65;
+
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2; 
+  ssl_prefer_server_ciphers on;
+  access_log stdout;
+  server {
+    listen            unix:/home/${USER}/.nginx.sock;
+    server_name       ${USER}.de1.hashbang.sh;
+
+    location / {
+      root /home/${USER}/Public;
+    }
+  }
+}
