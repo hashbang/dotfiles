@@ -1,0 +1,9 @@
+[Unit]
+Description=Run dehydrated -c periodically
+
+[Timer]
+OnBootSec=15min
+OnCalendar=weekly
+
+[Install]
+WantedBy=default.target
