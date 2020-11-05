@@ -7,8 +7,10 @@ Documentation=man:nginx(8)
 [Service]
 ExecStartPre=/bin/sh -c 'FULLHOST=`hostname -f` /usr/bin/envsubst < %h/.config/nginx/nginx.conf.template > %h/.config/nginx/nginx.conf'
 ExecStartPre=-/usr/bin/rm %h/.nginx.sock
+ExecStartPre=-/usr/bin/rm %h/.nginx.https.sock
 ExecStart=/usr/sbin/nginx -g 'daemon off; master_process on;' -p %h/.config/nginx -c nginx.conf
 ExecStartPost=-/usr/bin/rm %h/.nginx.sock
+ExecStartPost=-/usr/bin/rm %h/.nginx.https.sock
 Restart=always
 
 [Install]

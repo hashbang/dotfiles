@@ -1,0 +1,15 @@
+### Hashbang nginx user service template
+
+[Unit]
+Description=A high performance web server and a reverse proxy server
+Documentation=man:nginx(8)
+
+[Service]
+ExecStartPre=/bin/sh -c 'FULLHOST=`hostname -f` /usr/bin/envsubst < %h/.config/nginx/nginx-http-only.conf.template > %h/.config/nginx/nginx-http-only.conf'
+ExecStartPre=-/usr/bin/rm %h/.nginx.sock
+ExecStart=/usr/sbin/nginx -g 'daemon off; master_process on;' -p %h/.config/nginx -c nginx-http-only.conf
+ExecStartPost=-/usr/bin/rm %h/.nginx.sock
+Restart=always
+
+[Install]
+WantedBy=default.target

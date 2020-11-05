@@ -6,8 +6,8 @@ WorkingDirectory=%h/.config/dehydrated
 ExecStartPre=/bin/sh -c 'FULLHOST=`hostname -f` /usr/bin/envsubst < %h/.config/dehydrated/config.template > %h/.config/dehydrated/config'
 ExecStartPre=/bin/sh -c 'FULLHOST=`hostname -f` /usr/bin/envsubst < %h/.config/dehydrated/domains.txt.template > %h/.config/dehydrated/domains.txt'
 ExecStartPre=/bin/mkdir -p %h/Public/.well-known/acme-challenge
-ExecStartPre=/bin/sh -c 'test -d %h/.config/dehydrated/certs/%u.`hostname -f` || /usr/bin/dehydrated --register --accept-terms'
-ExecStart=/usr/bin/dehydrated -c
+ExecStartPre=/bin/sh -c 'test -d %h/.config/dehydrated/certs/%u.`hostname -f` || /usr/bin/dehydrated --register --accept-terms --config %h/.config/dehydrated/config'
+ExecStart=/usr/bin/dehydrated -c --config %h/.config/dehydrated/config
 Type=oneshot
 
 [Install]
