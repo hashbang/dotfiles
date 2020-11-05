@@ -8,7 +8,7 @@ Documentation=man:nginx(8)
 ExecStartPre=/bin/sh -c 'FULLHOST=`hostname -f` /usr/bin/envsubst < %h/.config/nginx/nginx-http-only.conf.template > %h/.config/nginx/nginx-http-only.conf'
 ExecStartPre=-/usr/bin/rm %h/.nginx.sock
 ExecStart=/usr/sbin/nginx -g 'daemon off; master_process on;' -p %h/.config/nginx -c nginx-http-only.conf
-ExecStartPost=-/usr/bin/rm %h/.nginx.sock
+ExecStopPost=-/usr/bin/rm %h/.nginx.sock
 Restart=always
 
 [Install]
