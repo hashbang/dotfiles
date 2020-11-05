@@ -6,5 +6,5 @@ Description=Basic HTTP server running on a UNIX socket.
 [Service]
 ExecStartPre=-/usr/bin/rm %h/.nginx.sock
 ExecStart=%h/bin/http-server-unix-socket %h/.nginx.sock
-ExecStartPost=/usr/bin/rm %h/.nginx.sock
+ExecStartPost=-/usr/bin/rm %h/.nginx.sock
 WorkingDirectory=%h/Public
