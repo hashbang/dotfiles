@@ -17,7 +17,7 @@ http {
 
   keepalive_timeout   65;
 
-  ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; 
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
   ssl_prefer_server_ciphers on;
   access_log stdout;
   server {
