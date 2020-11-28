@@ -1,0 +1,4 @@
+API=2
+CHALLENGETYPE="http-01"
+WELLKNOWN="${HOME}/Public/.well-known/acme-challenge"
+CONTACT_EMAIL="${USER}@${FULLHOST}"

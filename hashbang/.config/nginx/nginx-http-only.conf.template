@@ -17,23 +17,10 @@ http {
 
   keepalive_timeout   65;
 
-  ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; 
-  ssl_prefer_server_ciphers on;
   access_log stdout;
   server {
     listen            unix:/home/${USER}/.nginx.sock;
     server_name       ${USER}.${FULLHOST};
-
-    location / {
-      root /home/${USER}/Public;
-    }
-  }
-
-  server {
-    listen              unix:/home/${USER}/.nginx.https.sock ssl;
-    server_name         ${USER}.${FULLHOST};
-    ssl_certificate     /home/${USER}/.config/dehydrated/certs/${USER}.${FULLHOST}/fullchain.pem;
-    ssl_certificate_key /home/${USER}/.config/dehydrated/certs/${USER}.${FULLHOST}/privkey.pem;
 
     location / {
       root /home/${USER}/Public;
